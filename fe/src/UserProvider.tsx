@@ -3,14 +3,14 @@ import { createContext } from 'react'
 export interface UserContextState {
   user: User | null
   loading: boolean,
-  login: (email: string, password: string) => Promise<void>
+  login: () => Promise<void>
   logout: () => void
 }
 
 const defaultState = {
   user: null,
   loading: true,
-  login: async (email: string, password: string) => { },
+  login: async () => { },
   logout: () => { }
 }
 
